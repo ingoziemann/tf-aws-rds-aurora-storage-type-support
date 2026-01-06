@@ -374,3 +374,8 @@ variable "serverlessv2_max_capacity" {
   type        = number
   default     = 1
 }
+
+variable "storage_type" {
+  description = "Specifies the storage type to be used"
+  default     = ""
+}
