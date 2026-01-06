@@ -56,6 +56,7 @@ Generate them like so:
 go get github.com/segmentio/terraform-docs
 terraform-docs md ./ | cat -s | perl -e "print reverse(<>)" | tail -n +2 | perl -e "print reverse(<>)" >> README.md
 ```
+
 ## Requirements
 
 | Name | Version |
@@ -174,7 +175,7 @@ No modules.
 | <a name="input_skip_final_snapshot"></a> [skip\_final\_snapshot](#input\_skip\_final\_snapshot) | Should a final snapshot be created on cluster destroy | `bool` | `false` | no |
 | <a name="input_snapshot_identifier"></a> [snapshot\_identifier](#input\_snapshot\_identifier) | DB snapshot to create this database from | `string` | `""` | no |
 | <a name="input_storage_encrypted"></a> [storage\_encrypted](#input\_storage\_encrypted) | Specifies whether the underlying storage layer should be encrypted | `bool` | `false` | no |
-| <a name="input_storage_type"></a> [storage\_type](#input\_storage\_type) | Specifies the storage type to be used | `string` | `""` | no |
+| <a name="input_storage_type"></a> [storage\_type](#input\_storage\_type) | Specifies the storage type to be used by the DB cluster. Valid values are aurora and aurora-iopt1 | `string` | `""` | no |
 | <a name="input_store_master_creds_ssm"></a> [store\_master\_creds\_ssm](#input\_store\_master\_creds\_ssm) | Whether to store master user and password in SSM | `bool` | `false` | no |
 | <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | List of subnet IDs to use | `list(string)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources. | `map(string)` | `{}` | no |
